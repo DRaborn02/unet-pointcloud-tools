@@ -239,9 +239,9 @@ def main():
     parser.add_argument("orthoimage_dir", help="Folder containing orthoimages and labels")
     parser.add_argument("dataset_output_root", help="Root folder where timestamped dataset folder is created")
     parser.add_argument("--validation-split", type=float, default=0.2)
-    parser.add_argument("--target-height", type=int, default=512)
-    parser.add_argument("--patch-size", type=int, default=512)
-    parser.add_argument("--stride", type=int, default=256)
+    parser.add_argument("--target-height", type=int, default=256)
+    parser.add_argument("--patch-size", type=int, default=256)
+    parser.add_argument("--stride", type=int, default=128)
     parser.add_argument("--white-threshold", type=float, default=0.98)
     args = parser.parse_args()
 
