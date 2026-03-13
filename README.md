@@ -33,7 +33,14 @@ src/
 From the project root:
 
 ```powershell
-python -m venv .venv
+# Ensure you have Python 3.10 installed:
+python --version
+# If not, install with:
+winget install --id Python.Python.3.10
+# Or download manually from https://www.python.org/downloads/release/python-3100/
+
+# Create a virtual environment using Python 3.10
+py -3.10 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```

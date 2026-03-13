@@ -203,12 +203,18 @@ def create_dataset(
     validation_patches = all_patches[:val_count]
     training_patches = all_patches[val_count:]
 
+
     paths = _build_dataset_paths(dataset_output_root)
     _save_patch_pairs(training_patches, paths["train_img_dir"], paths["train_lbl_dir"])
     _save_patch_pairs(validation_patches, paths["val_img_dir"], paths["val_lbl_dir"])
 
-    if copy_unmatched_to_test and unmatched_images:
-        _copy_unmatched_to_test(unmatched_images, paths["test_dir"])
+    # Copy 3-4 validation images to test set
+    test_count = min(4, len(validation_patches))
+    if test_count > 0:
+        for idx in range(test_count):
+            img_patch, _ = validation_patches[idx]
+            file_name = f"{idx:06d}.png"
+            img_patch.save(os.path.join(paths["test_dir"], file_name))
 
     summary = {
         "dataset_root": paths["dataset_root"],
