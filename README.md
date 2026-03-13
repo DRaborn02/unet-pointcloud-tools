@@ -131,7 +131,7 @@ Options:
 Example:
 
 ```powershell
-python src/main.py create_dataset --validation-split 0.2 --patch-size 512 --stride 256
+python src/main.py create_dataset --validation-split 0.2 --patch-size 256 --stride 128
 ```
 
 ## Standalone Script Commands
