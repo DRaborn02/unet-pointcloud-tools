@@ -1,0 +1,27 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Raw/generated point cloud data
+pointcloud/**/*.las
+pointcloud/**/*.laz
+pointcloud/**/*.ply
+
+# Generated image and dataset artifacts
+images/**/*.jpg
+images/**/*.jpeg
+images/**/*.png
+images/**/*.tif
+images/**/*.tiff
+images/**/*.bmp
+images/**/*.npy
+
+# Keep folder placeholders committed
+!images/**/.gitkeep
+!pointcloud/**/.gitkeep
