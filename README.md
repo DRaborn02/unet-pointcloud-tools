@@ -121,9 +121,9 @@ Labels are matched to images using these suffix patterns:
 Options:
 - `--workspace-root` (default: project root)
 - `--validation-split` (default: `0.2`)
-- `--target-height` (default: `512`)
-- `--patch-size` (default: `512`)
-- `--stride` (default: `256`)
+- `--target-height` (default: `256`)
+- `--patch-size` (default: `256`)
+- `--stride` (default: `128`)
 - `--white-threshold` (default: `0.98`)
 - `--seed` (default: `42`)
 - `--no-copy-unmatched-to-test` (default: off)
